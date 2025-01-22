@@ -1,0 +1,45 @@
+---
+import Image from "astro/components/Image.astro";
+import { Container } from "./global";
+import placeHolderImage from "../assets/placeholder.svg";
+---
+
+<section
+  class="pt-32 pb-24 md:pt-40 md:pb-32 bg-gradient-to-br from-primary/5 via-background to-background"
+>
+  <Container>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+          Transformamos ideas en experiencias digitales
+        </h1>
+        <p class="text-lg text-muted-foreground">
+          Desarrollamos soluciones web innovadoras y personalizadas que impulsan
+          el crecimiento de tu negocio.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="btn btn-primary text-gray-100">
+            Comienza ahora
+          </button>
+          <button class="btn btn-secondary text-gray-200">
+            Ver proyectos
+          </button>
+        </div>
+      </div>
+      <div class="relative">
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-3xl"
+        >
+        </div>
+        <Image
+          src={placeHolderImage}
+          alt="Hero Image"
+          width={600}
+          height={400}
+          class="relative rounded-3xl shadow-2xl"
+          priority
+        />
+      </div>
+    </div>
+  </Container>
+</section>
