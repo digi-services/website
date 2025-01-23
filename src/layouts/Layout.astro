@@ -1,6 +1,5 @@
 ---
-import { Navigation } from "../components/Navigation";
-import SocialBanner from "../components/SocialBanner.astro";
+import { SocialBanner, Navigation } from "../components";
 ---
 
 <!doctype html>
@@ -18,9 +17,7 @@ import SocialBanner from "../components/SocialBanner.astro";
     <div class="min-h-screen">
       <SocialBanner />
       <Navigation client:load />
-      <div class="mt-40">
-        <slot />
-      </div>
+      <slot />
     </div>
   </body>
 </html>

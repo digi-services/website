@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
         isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-white"
       }`}
     >
-      <div className="mx-auto px-4 md:px-0 w-full max-w-4xl">
+      <div className="mx-auto px-4 md:px-0 w-full max-w-7xl">
         <div className="flex items-center justify-between h-16">
           <a href="/" className="flex items-center space-x-2">
             <span className="font-bold text-xl">DS</span>
