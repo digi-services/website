@@ -1,105 +1,119 @@
 ---
-import { Container } from "@components/global";
+import {
+  Container,
+  PhoneIcon,
+  MailIcon,
+  LocationIcon,
+  ClockIcon,
+  IconContainer,
+} from "@/components";
 ---
 
-<div class="navy-blue text-white py-6">
+<div class="bg-base-200 py-6 text-neutral-800">
   <Container>
-    <div class="flex justify-between">
-      <div class="flex space-x-2 ">
-        
-        <div class="flex"><rux-icon size="xs" icon="location-on"></rux-icon></div>
-        <div class="text-xs font-medium "> Av.Holanda 099 / Providencia - Santiago</div>
-        <div class="text-xs font-medium">|</div>
-
-        <div class="flex"><rux-icon size="xs" icon="phone"></rux-icon></div>
-        <div class="text-xs font-medium"> +56 2 6469 3359</div>
-        <div class="text-xs font-medium">|</div>
-
-        <div class="flex"><rux-icon size="xs" icon="mail"></rux-icon></div>
-        <div class="text-xs font-medium"> ventas@webemprendedores.cl</div>
-        <div class="text-xs font-medium">|</div>
-
-        <div class="flex"><rux-icon size="xs" icon="schedule"></rux-icon></div>
-        <div class="text-xs font-medium"> Lunes a Viernes: 9:00 - 17:00</div>
-      </div>
-      
-      <!-- Íconos RRSS -->
-      <div class="flex space-x-1">
-        <!-- Ícono de Facebook -->
-        <div class="flex">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            class="hover:text-gray-300 transition text-facebook-blue"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .733.592 1.324 1.325 1.324h11.495v-9.294h-3.125v-3.622h3.125v-2.672c0-3.1 1.893-4.785 4.656-4.785 1.325 0 2.463.099 2.794.144v3.241l-1.918.001c-1.505 0-1.796.716-1.796 1.763v2.308h3.59l-.467 3.622h-3.123v9.293h6.127c.732 0 1.325-.591 1.325-1.324v-21.35c0-.733-.593-1.325-1.325-1.325z"
-              ></path>
-            </svg>
-          </a>
+    <div
+      class="flex flex-wrap justify-between items-center space-y-2 md:space-y-0"
+    >
+      <!-- Información de contacto -->
+      <div class="flex flex-wrap items-center space-x-4 text-xs font-medium">
+        <!-- Dirección -->
+        <div class="flex items-center space-x-2">
+          <IconContainer>
+            <LocationIcon width="18" height="18" />
+          </IconContainer>
+          <span>Av.Holanda 099 / Providencia - Santiago</span>
         </div>
-    
-        <!-- Ícono de X (Twitter) -->
-        <div class="flex">
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            class="hover:text-gray-300 transition text-x-black"
+
+        <div class="hidden md:flex items-center justify-center my-auto">|</div>
+
+        <!-- Teléfono -->
+        <div class="flex items-center space-x-2">
+          <IconContainer>
+            <PhoneIcon width="18" height="18" />
+          </IconContainer>
+          <span>+56 2 6469 3359</span>
+        </div>
+
+        <div class="hidden md:block">|</div>
+
+        <!-- Email -->
+        <div class="flex items-center space-x-2">
+          <IconContainer>
+            <MailIcon width="18" height="18" />
+          </IconContainer>
+          <span>ventas@webemprendedores.cl</span>
+        </div>
+
+        <div class="hidden md:block">|</div>
+
+        <!-- Horario -->
+        <div class="flex items-center space-x-2">
+          <IconContainer>
+            <ClockIcon width="18" height="18" />
+          </IconContainer>
+          <span>Lunes a Viernes: 9:00 - 17:00</span>
+        </div>
+      </div>
+
+      <!-- Íconos de redes sociales -->
+      <div class="flex space-x-4">
+        <!-- Facebook -->
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          class="hover:text-gray-300 transition-colors text-facebook-blue"
+          aria-label="Facebook"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
+            <path
+              d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .733.592 1.324 1.325 1.324h11.495v-9.294h-3.125v-3.622h3.125v-2.672c0-3.1 1.893-4.785 4.656-4.785 1.325 0 2.463.099 2.794.144v3.241l-1.918.001c-1.505 0-1.796.716-1.796 1.763v2.308h3.59l-.467 3.622h-3.123v9.293h6.127c.732 0 1.325-.591 1.325-1.324v-21.35c0-.733-.593-1.325-1.325-1.325z"
+            ></path>
+          </svg>
+        </a>
+
+        <!-- Twitter -->
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          class="hover:text-gray-300 transition-colors text-x-black"
+          aria-label="Twitter"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
               d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.957 6.817H2.18l7.73-8.835L1.5 2.25h7.163l4.713 6.231 5.868-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"
             ></path>
-            </svg>
-          </a>
-        </div>
-    
-        <!-- Ícono de LinkedIn -->
-        <div class="flex">
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            class="hover:text-gray-300 transition text-linkedin-blue"
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          class="hover:text-gray-300 transition-colors text-linkedin-blue"
+          aria-label="LinkedIn"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M22.23 0h-20.46c-.974 0-1.77.795-1.77 1.77v20.459c0 .975.796 1.771 1.77 1.771h20.459c.975 0 1.771-.796 1.771-1.771v-20.459c0-.975-.796-1.77-1.771-1.77zm-15.337 20.452h-3.293v-10.972h3.293v10.972zm-1.646-12.524c-1.052 0-1.904-.853-1.904-1.904s.852-1.905 1.904-1.905c1.052 0 1.904.854 1.904 1.905s-.852 1.904-1.904 1.904zm13.523 12.524h-3.292v-5.578c0-1.33-.027-3.042-1.856-3.042-1.859 0-2.144 1.448-2.144 2.945v5.675h-3.293v-10.972h3.163v1.497h.044c.441-.833 1.52-1.709 3.13-1.709 3.345 0 3.963 2.202 3.963 5.065v6.119z"
-              ></path>
-            </svg>
-          </a>
-        </div>
+            <path
+              d="M22.23 0h-20.46c-.974 0-1.77.795-1.77 1.77v20.459c0 .975.796 1.771 1.77 1.771h20.459c.975 0 1.771-.796 1.771-1.771v-20.459c0-.975-.796-1.77-1.771-1.77zm-15.337 20.452h-3.293v-10.972h3.293v10.972zm-1.646-12.524c-1.052 0-1.904-.853-1.904-1.904s.852-1.905 1.904-1.905c1.052 0 1.904.854 1.904 1.905s-.852 1.904-1.904 1.904zm13.523 12.524h-3.292v-5.578c0-1.33-.027-3.042-1.856-3.042-1.859 0-2.144 1.448-2.144 2.945v5.675h-3.293v-10.972h3.163v1.497h.044c.441-.833 1.52-1.709 3.13-1.709 3.345 0 3.963 2.202 3.963 5.065v6.119z"
+            ></path>
+          </svg>
+        </a>
       </div>
     </div>
   </Container>
 </div>
-
-<style>
-  rux-icon {
-  color: hsl(198, 87%, 91%);
-  width: 1em !important; /* Ajusta al tamaño de texto */
-  height: 1em !important;
-}
-rux-icon-phone {
-  box-sizing: content-box;
-}
-rux-icon-phone div {
-  width: 1rem !important;
-  height: 1rem !important;
-}
-</style>

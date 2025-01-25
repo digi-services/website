@@ -1,157 +1,148 @@
-import React, { useState } from "react";
+"use client";
 
-const Navigation: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+import { scrollToSection } from "@/lib/utils";
+import { useState, useEffect } from "react";
+import { CodeIcon, MenuIcon, XIcon } from "./icons";
+
+export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  useEffect(() => {
+    setIsScrolled(window.scrollY > 68);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  React.useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 68);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    scrollToSection(sectionId);
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 mt-16 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-white"
-      }`}
-    >
-      <div className="mx-auto px-4 md:px-0 w-full max-w-7xl">
-        <div className="flex items-center justify-between h-16">
-          <a href="/" className="flex items-center space-x-2">
-            <span className="font-bold text-xl">DS</span>
-          </a>
+    <>
+      <nav
+        className={`w-full transition-all duration-300 ${
+          isScrolled
+            ? "fixed top-0 left-0 right-0 backdrop-blur-md shadow-sm z-40"
+            : "absolute z-30 bg-neutral-950 text-white"
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <a href="/" className="flex items-center space-x-2">
+              <CodeIcon width="18" height="18" />
+              <span className="font-bold text-xl">Digital Solutions</span>
+            </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#servicios"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("servicios");
-              }}
-              className="text-sm hover:text-primary transition-colors"
-            >
-              Servicios
-            </a>
-            <a
-              href="#planes"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("planes");
-              }}
-              className="text-sm hover:text-primary transition-colors"
-            >
-              Planes
-            </a>
-            <a
-              href="#portfolio"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("portfolio");
-              }}
-              className="text-sm hover:text-primary transition-colors"
-            >
-              Portfolio
-            </a>
-            <a
-              href="#contacto"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("contacto");
-              }}
-              className="text-sm hover:text-primary transition-colors"
-            >
-              Contacto
-            </a>
-          </div>
+            {/* Navegación Desktop */}
+            <div className="hidden md:flex items-center space-x-8">
+              <a
+                href="#home"
+                onClick={(e) => handleNavClick(e, "home")}
+                className="text-sm hover:text-primary transition-colors"
+              >
+                Inicio
+              </a>
+              <a
+                href="#services"
+                onClick={(e) => handleNavClick(e, "services")}
+                className="text-sm hover:text-primary transition-colors"
+              >
+                Servicios
+              </a>
+              <a
+                href="#planes"
+                onClick={(e) => handleNavClick(e, "planes")}
+                className="text-sm hover:text-primary transition-colors"
+              >
+                Planes
+              </a>
+              <a
+                href="#portfolio"
+                onClick={(e) => handleNavClick(e, "portfolio")}
+                className="text-sm hover:text-primary transition-colors"
+              >
+                Portfolio
+              </a>
+              <a
+                href="#contacto"
+                onClick={(e) => handleNavClick(e, "contacto")}
+                className="text-sm hover:text-primary transition-colors"
+              >
+                Contacto
+              </a>
+            </div>
 
-          <button className="md:hidden" onClick={toggleMenu}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+            <button
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-background border-t">
-          <div className="container mx-auto px-4 py-4 space-y-4">
-            <a
-              href="#servicios"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("servicios");
-                setIsMenuOpen(false);
-              }}
-              className="block text-sm hover:text-primary transition-colors"
-            >
-              Servicios
-            </a>
-            <a
-              href="#planes"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("planes");
-                setIsMenuOpen(false);
-              }}
-              className="block text-sm hover:text-primary transition-colors"
-            >
-              Planes
-            </a>
-            <a
-              href="#portfolio"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("portfolio");
-                setIsMenuOpen(false);
-              }}
-              className="block text-sm hover:text-primary transition-colors"
-            >
-              Portfolio
-            </a>
-            <a
-              href="#contacto"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("contacto");
-                setIsMenuOpen(false);
-              }}
-              className="block text-sm hover:text-primary transition-colors"
-            >
-              Contacto
-            </a>
+              {isMenuOpen ? (
+                <XIcon width="18" height="18" />
+              ) : (
+                <MenuIcon width="18" height="18" />
+              )}
+            </button>
           </div>
         </div>
-      )}
-    </nav>
+
+        {/* Menú Móvil con animación */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${
+            isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="bg-background/80 backdrop-blur-md border-t">
+            <div className="container mx-auto px-4 py-4 space-y-4">
+              <a
+                href="#home"
+                onClick={(e) => handleNavClick(e, "home")}
+                className="block text-sm hover:text-primary transition-colors"
+              >
+                Inicio
+              </a>
+              <a
+                href="#services"
+                onClick={(e) => handleNavClick(e, "servicios")}
+                className="block text-sm hover:text-primary transition-colors"
+              >
+                Servicios
+              </a>
+              <a
+                href="#planes"
+                onClick={(e) => handleNavClick(e, "planes")}
+                className="block text-sm hover:text-primary transition-colors"
+              >
+                Planes
+              </a>
+              <a
+                href="#portfolio"
+                onClick={(e) => handleNavClick(e, "portfolio")}
+                className="block text-sm hover:text-primary transition-colors"
+              >
+                Portfolio
+              </a>
+              <a
+                href="#contacto"
+                onClick={(e) => handleNavClick(e, "contacto")}
+                className="block text-sm hover:text-primary transition-colors"
+              >
+                Contacto
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </>
   );
-};
-
-export { Navigation };
+}
