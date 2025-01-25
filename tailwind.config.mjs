@@ -12,7 +12,7 @@ export default {
         "navy-blue": "hsl(195, 97%, 13%)",
         // Colores para redes sociales
         "facebook-blue": "#1877F2", // Color oficial de Facebook
-        "x-black": "#BBBBBB",       // Color oficial de X (Twitter)
+        "x-black": "#BBBBBB", // Color oficial de X (Twitter)
         "linkedin-blue": "#0A66C2", // Color oficial de LinkedIn
       },
     },
