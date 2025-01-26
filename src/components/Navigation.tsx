@@ -63,8 +63,8 @@ export function Navigation() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a
-                href="#planes"
-                onClick={(e) => handleNavClick(e, "planes")}
+                href="#plans"
+                onClick={(e) => handleNavClick(e, "plans")}
                 className="text-sm font-medium text-white hover:text-primary transition-colors relative group"
               >
                 Planes
@@ -124,8 +124,8 @@ export function Navigation() {
                 Servicios
               </a>
               <a
-                href="#planes"
-                onClick={(e) => handleNavClick(e, "planes")}
+                href="#plans"
+                onClick={(e) => handleNavClick(e, "plans")}
                 className="block text-sm font-medium text-white hover:text-primary transition-colors"
               >
                 Planes
