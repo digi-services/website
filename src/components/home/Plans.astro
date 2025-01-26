@@ -1,0 +1,196 @@
+<section id="plans" class="py-24">
+    <div class="container mx-auto px-4">
+      <!-- Título y descripción -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold mb-4">Nuestros Planes</h2>
+        <p class="text-muted-foreground">Soluciones adaptadas a las necesidades de tu negocio</p>
+      </div>
+  
+      <!-- Grid de planes -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Plan PYME -->
+        <div class="card relative overflow-hidden bg-white shadow-lg rounded-lg">
+          <div class="p-6">
+            <div class="space-y-6">
+              <div class="space-y-2 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-12 h-12 mx-auto text-primary"
+                >
+                  <path d="M2 20h20" />
+                  <path d="M3 10h18v10H3z" />
+                  <path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4" />
+                </svg>
+                <h3 class="text-2xl font-bold">Plan PYME</h3>
+                <div class="text-3xl font-bold">$999</div>
+                <p class="text-sm text-muted-foreground">Ideal para pequeños negocios</p>
+              </div>
+              <div class="space-y-4">
+                {[
+                  "Sitio web responsive",
+                  "Hasta 5 páginas",
+                  "Formulario de contacto",
+                  "SEO básico",
+                  "Soporte por email",
+                ].map((feature) => (
+                  <div class="flex items-start gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-5 w-5 text-primary shrink-0"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <path d="M22 4 12 14.01l-3-3" />
+                    </svg>
+                    <span class="text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              <button class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+                Seleccionar Plan
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Plan Empresa -->
+        <div class="card relative overflow-hidden bg-white shadow-lg rounded-lg border-2 border-primary">
+          <div class="p-6">
+            <div class="space-y-6">
+              <div class="space-y-2 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-12 h-12 mx-auto text-primary"
+                >
+                  <path d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z" />
+                  <path d="M12 7v10" />
+                  <path d="M9 7v10" />
+                  <path d="M15 7v10" />
+                </svg>
+                <h3 class="text-2xl font-bold">Plan Empresa</h3>
+                <div class="text-3xl font-bold">$2,499</div>
+                <p class="text-sm text-muted-foreground">Para empresas en crecimiento</p>
+              </div>
+              <div class="space-y-4">
+                {[
+                  "Todo lo del Plan PYME",
+                  "Hasta 10 páginas",
+                  "Blog integrado",
+                  "SEO avanzado",
+                  "Panel de administración",
+                  "Soporte prioritario",
+                ].map((feature) => (
+                  <div class="flex items-start gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-5 w-5 text-primary shrink-0"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <path d="M22 4 12 14.01l-3-3" />
+                    </svg>
+                    <span class="text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              <button class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+                Seleccionar Plan
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Plan VIP -->
+        <div class="card relative overflow-hidden bg-white shadow-lg rounded-lg">
+          <div class="p-6">
+            <div class="space-y-6">
+              <div class="space-y-2 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-12 h-12 mx-auto text-primary"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+                <h3 class="text-2xl font-bold">Plan VIP</h3>
+                <div class="text-3xl font-bold">$4,999</div>
+                <p class="text-sm text-muted-foreground">Solución empresarial completa</p>
+              </div>
+              <div class="space-y-4">
+                {[
+                  "Todo lo del Plan Empresa",
+                  "Páginas ilimitadas",
+                  "E-commerce integrado",
+                  "Apps personalizadas",
+                  "Análisis de datos",
+                  "Soporte 24/7",
+                  "Consultoría estratégica",
+                ].map((feature) => (
+                  <div class="flex items-start gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-5 w-5 text-primary shrink-0"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <path d="M22 4 12 14.01l-3-3" />
+                    </svg>
+                    <span class="text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              <button class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+                Seleccionar Plan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
