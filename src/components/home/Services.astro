@@ -1,64 +1,74 @@
----
-// No se utiliza React aquí, todo es HTML estático con DaisyUI y TailwindCSS
----
-
 <section id="services" class="py-24 bg-gray-100">
-  <div class="container mx-auto px-4">
-    <!-- Título y descripción -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-3xl font-bold mb-4">Nuestros Servicios</h2>
-      <p class="text-gray-600">
-        Ofrecemos soluciones digitales completas para ayudarte a alcanzar tus
-        objetivos.
-      </p>
+    <div class="container mx-auto px-4">
+      <!-- Título y descripción -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold mb-4 text-gray-800">Nuestros Servicios</h2>
+        <p class="text-gray-600 text-lg">
+            Te ayudamos a transformar tus ideas en soluciones digitales que impulsan tu negocio.
+        </p>
+      </div>
+  
+      <!-- Cards de servicios -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="card bg-white shadow-lg rounded-lg group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="card-body p-6 space-y-6">
+            <div class="p-4 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg w-fit group-hover:from-blue-200 group-hover:to-blue-100 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brackets-angle text-blue-600">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M8 4l-5 8l5 8" />
+                <path d="M16 4l5 8l-5 8" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">Diseño y Desarrollo Web a Medida</h3>
+            <p class="text-gray-600 text-lg">
+                Creamos sitios web modernos, rápidos y optimizados para SEO que no solo lucen increíbles, sino que también atraen y retienen a tus clientes.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="card bg-white shadow-lg rounded-lg group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="card-body p-6 space-y-6">
+            <div class="p-4 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg w-fit group-hover:from-blue-200 group-hover:to-blue-100 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-world-www text-blue-600">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
+                <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
+                <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
+                <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
+                <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
+                <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
+                <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
+                <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
+                <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">Aplicaciones Web Personalizadas y Escalables</h3>
+            <p class="text-gray-600 text-lg">
+                Desarrollamos aplicaciones web personalizadas que se adaptan a tus necesidades, mejoran la eficiencia de tu negocio y ofrecen una experiencia de usuario excepcional.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="card bg-white shadow-lg rounded-lg group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="card-body p-6 space-y-6">
+            <div class="p-4 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg w-fit group-hover:from-blue-200 group-hover:to-blue-100 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart text-blue-600">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M17 17h-11v-14h-2" />
+                <path d="M6 5l14 1l-1 7h-13" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">E-commerce</h3>
+            <p class="text-gray-600 text-lg">
+              Construimos tiendas online optimizadas para conversiones, con integraciones de pago seguras y diseños que impulsan tus ventas.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Cards de servicios -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Card 1 -->
-      <div class="card bg-white shadow-md group hover:shadow-lg transition-all">
-        <div class="card-body space-y-4">
-          <div
-            class="p-3 bg-blue-100 rounded-lg w-fit group-hover:bg-blue-200 transition-colors"
-          >
-            * icono *
-          </div>
-          <h3 class="text-xl font-semibold">Desarrollo Web</h3>
-          <p class="text-gray-600">
-            Sitios web modernos y responsivos que destacan tu marca.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card bg-white shadow-md group hover:shadow-lg transition-all">
-        <div class="card-body space-y-4">
-          <div
-            class="p-3 bg-blue-100 rounded-lg w-fit group-hover:bg-blue-200 transition-colors"
-          >
-            * icono *
-          </div>
-          <h3 class="text-xl font-semibold">Aplicaciones Web</h3>
-          <p class="text-gray-600">
-            Aplicaciones web potentes y escalables para tu negocio.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card bg-white shadow-md group hover:shadow-lg transition-all">
-        <div class="card-body space-y-4">
-          <div
-            class="p-3 bg-blue-100 rounded-lg w-fit group-hover:bg-blue-200 transition-colors"
-          >
-            * icono *
-          </div>
-          <h3 class="text-xl font-semibold">E-commerce</h3>
-          <p class="text-base-600">
-            Tiendas online optimizadas para aumentar tus ventas.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>

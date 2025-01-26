@@ -1,0 +1,78 @@
+---
+// No necesitamos importaciones específicas para este componente en Astro
+---
+
+<section id="portfolio" class="py-24 bg-muted/50">
+    <div class="container mx-auto px-4">
+      <!-- Título y descripción -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold mb-4">Nuestro Portfolio</h2>
+        <p class="text-muted-foreground">Descubre cómo hemos ayudado a otros negocios a crecer en digital</p>
+      </div>
+  
+      <!-- Grid de proyectos -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "E-commerce de Moda",
+            description: "Tienda online con más de 1000 productos y sistema de pagos integrado",
+            tags: ["Next.js", "Stripe", "AWS"],
+          },
+          {
+            title: "App de Delivery",
+            description: "Aplicación web progresiva para servicio de entrega a domicilio",
+            tags: ["React", "Node.js", "MongoDB"],
+          },
+          {
+            title: "Portal Inmobiliario",
+            description: "Plataforma de búsqueda y gestión de propiedades",
+            tags: ["Vue.js", "Firebase", "Google Maps"],
+          },
+          {
+            title: "Dashboard Empresarial",
+            description: "Panel de control para análisis de datos en tiempo real",
+            tags: ["React", "GraphQL", "D3.js"],
+          },
+          {
+            title: "Red Social Educativa",
+            description: "Plataforma de conexión entre estudiantes y profesores",
+            tags: ["Next.js", "Socket.io", "PostgreSQL"],
+          },
+          {
+            title: "CMS Personalizado",
+            description: "Sistema de gestión de contenidos para medio digital",
+            tags: ["React", "Headless CMS", "AWS"],
+          },
+        ].map((project) => (
+            
+          <div class="card overflow-hidden group bg-white shadow-lg rounded-lg">
+            <div class="relative">
+              <img
+                src="https://www.susla.edu/assets/susla/images/WebDevelopmentImage.jpeg"
+                alt={project.title}
+                width="400"
+                height="300"
+                class="w-full aspect-video object-cover transition-transform group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <button class="bg-secondary text-white py-2 px-4 rounded-lg hover:bg-secondary/90 transition-colors">
+                  Ver Detalles
+                </button>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold mb-2">{project.title}</h3>
+              <p class="text-sm text-muted-foreground mb-4">{project.description}</p>
+              <div class="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span class="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
